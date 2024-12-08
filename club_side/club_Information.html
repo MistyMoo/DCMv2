@@ -4,29 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="node_modules/@fancyapps/ui/dist/fancybox/fancybox.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/trialsummary.css">
-    <link rel="stylesheet" href="../styles/general.css">
-    <link rel="stylesheet" href="../styles/sidebar.css">
-
-
-
+    <!-- Uncomment these lines if you need Fancybox and Font Awesome -->
+    <!-- <link rel="stylesheet" href="node_modules/@fancyapps/ui/dist/fancybox/fancybox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
 </head>
 <body>
     <div class="header">
-        <div class = "header-left">
-            <img class = "hamburger-menu" src="icons/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" >
-            <img class = "club-logo" src="icons/ABKC logo.jpg">
+        <div class="header-left">
+            <img class="hamburger-menu" src="icons/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+            <img class="club-logo" src="icons/ABKC logo.jpg">
         </div>
-            <div class="header-center"> 
-                <input type="text" class="search-bar" id="searchInput" placeholder="Search...">
-                <button class = "search-button">
-                    <img class="search-icon" src="icons/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
-                    <div class = "tool-tip">Search</div>
-                </button>
-            </div>
+        <div class="header-center"> 
+            <input type="text" class="search-bar" id="searchInput" placeholder="Search...">
+            <button class="search-button">
+                <img class="search-icon" src="icons/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                <div class="tool-tip">Search</div>
+            </button>
+        </div>
         <div class="header-right">
             <div class = "create-trial-icon-container">
                 <img class="create-trial-icon" src="icons/pets_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
@@ -47,8 +44,6 @@
         <div class="sidebar-link">Club settings</div>
         <!--<div class="sidebar-link"></div>
         <div class="sidebar-link"></div>-->
-
-
     </div>
     <div>
         Club to view
@@ -60,17 +55,17 @@
     <div class="js-club-info">
         <h2>Club Information</h2>
     </div>
-     <!-- Link styled as a button to trigger the iframe popup using Fancybox -->
+     <!-- Link styled as a button to trigger the iframe popup using Fancybox -
      <a data-fancybox data-type="iframe" data-src="enterClubInfo.html" href="javascript:;" class="button-like" id="openIframeButton">Update club information</a>
-
+-->
 
     <script type="module" src="scripts/clubInformation.js" defer></script>
-    <script src="node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+    <!--<script src="node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
     <script>
         // Initialize Fancybox
         Fancybox.bind("[data-fancybox]", {
             // Custom options
         });
-    </script>
+    </script>-->
 </body>
 </html>
