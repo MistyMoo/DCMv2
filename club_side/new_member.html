@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Member Registration</title>
+</head>
+<body>
+    <form id="NewMemberInfoForm">
+        <h1>Enter new member information</h1>
+        <div>
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div>
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div>
+            <label for="address1">Address 1</label>
+            <input type="text" id="address1" name="address1" required>
+        </div>
+        <div>
+            <label for="address1">Address 2</label>
+            <input type="text" id="address2" name="address2" required>
+        </div>
+        <div>
+            <label for="citySuburb">City/Suburb</label>
+            <input type="text" id="citySuburb" name="citySuburb" required>
+        </div>
+        <div>
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+        <div>
+            <label for="postcode">Post code</label>
+            <input type="text" id="postcode" name="postcode" required>
+        </div>
+        <div>
+            <label for="emailAddress">Email address</label>
+            <input type="email" id="emailAddress" name="emailAddress" required>
+        </div>
+        <div>
+            <label for="phoneNumber">Phone number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        </div>
+        <div>
+            <label for="emergencyContact">Emergency Contact</label>
+            <input type="text" id="emergencyContact" name="emergencyContact" required>
+        </div>
+        <div>
+            <label for="emergencyContactPhone">Emergency contact phone</label>
+            <input type="tel" id="emergencyContactPhone" name="emergencyContactPhone" required>
+        </div>
+        <div>
+            <label for="dogsNSWrego">Dogs NSW registration number</label>
+            <input type="text" id="dogsNSWrego" name="dogsNSWrego">
+        </div>
+        <fieldset>
+            <legend>How do you want to receive the Border Bark?</legend>
+            <div>
+                <input type="radio" id="bbDeliveryMethodEmail" name="bbDeliveryMethod" value="email" required>
+                <label for="bbDeliveryMethodEmail">Email</label>
+            </div>
+            <div>
+                <input type="radio" id="bbDeliveryMethodPost" name="bbDeliveryMethod" value="post" required>
+                <label for="bbDeliveryMethodPost">Post</label>
+            </div>
+        </fieldset>
+        <button type="submit">Save member information</button>
+    </form>
+</body>
+</html>

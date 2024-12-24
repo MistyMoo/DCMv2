@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="Styles/sidebar.css">
+    <link rel="stylesheet" href="./node_modules/@fancyapps/ui/dist/fancybox/fancybox.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <!-- Fancybox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img class="hamburger-menu" src="icons/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+            <img class="club-logo" src="icons/ABKC logo.jpg">
+        </div>
+        <div class="header-center"> 
+            <input type="text" class="search-bar" id="searchInput" placeholder="Search...">
+            <button class="search-button">
+                <img class="search-icon" src="icons/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                <div class="tool-tip">Search</div>
+            </button>
+        </div>
+        <div class="header-right">
+            <div class="create-trial-icon-container">
+                <img class="create-trial-icon" src="icons/pets_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                <div class="tool-tip">Create trial</div>
+            </div>
+            <div class="logout-icon-container">
+                <img class="logout-icon" src="icons/logout_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                <div class="tool-tip">Logout</div>
+            </div>
+        </div>
+    </div>
+<div id="sidebar-container"></div>
+    <div>
+        Club to view
+        <input type="text" id="clubIdInput" placeholder="Enter Club ID">
+        <button id="showClubInfoButton">Show Club Info</button>
+        <p>only here for testing purposes, remove once finished</p>
+    </div>
+    <br>
+    <div class="button-container">
+        <div>
+            <!-- Link styled as a button to trigger the iframe popup using Fancybox -->
+            <a data-fancybox data-type="iframe" data-src="new_member.html" href="javascript:;" class="button-like" id="openIframeButton">Enter new member</a>
+        </div>  
+        <div>
+            <button class="button-like" id="searchMembers">Search members</button>
+        </div>
+        <div>
+            <button class="button-like" id="emailMembersButton">Email members</button>
+        </div>
+
+    </div>  
+
+    <div class="js-member-info">
+        <h2>Current members list</h2>
+    </div>  
+    <table id="membersInfoTable" class="js-member-info member-info">
+        <thead>
+            <tr>
+                <th>Member Number</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Membership Type</th>
+                <th>Membership Status</th>
+                <th>Membership Expiry</th>
+                <th>More</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Member rows will be inserted here by JavaScript -->
+        </tbody>
+    </table>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="./scripts/memberInformation.js" defer></script>
+    <script src="./node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Custom options
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('[data-fancybox]').fancybox();
+        });
+
+    </script>
+
+</body>
+</html>
