@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="Styles/sidebar.css">
     <link rel="stylesheet" href="./node_modules/@fancyapps/ui/dist/fancybox/fancybox.css">
-    <!-- jQuery -->
+    <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Fancybox CSS -->
+    <!-- Include Fancybox CSS and JS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-    <!-- Fancybox JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 </head>
+<body>
 <body>
 <div id="header-container"></div>
 <div id="sidebar-container"></div>
@@ -58,6 +58,26 @@
             <!-- Member rows will be inserted here by JavaScript -->
         </tbody>
     </table>
+    <!-- Modal for Fancybox -->
+    <div style="display: none;" id="memberModal">
+        <form>
+            <label for="memberNumber">Member Number:</label>
+            <input type="text" id="memberNumber" readonly><br>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName"><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName"><br>
+            <label for="membershipType">Membership Type:</label>
+            <input type="text" id="membershipType"><br>
+            <label for="membershipStatus">Membership Status:</label>
+            <input type="text" id="membershipStatus"><br>
+            <label for="membershipExpiry">Membership Expiry:</label>
+            <input type="text" id="membershipExpiry"><br>
+            <button type="button" id="saveMember">Save</button>
+        </form>
+    </div>
+
+
     <script type="module" src="scripts/main.js"></script>
     <script type="module" src="./scripts/memberInformation.js" defer></script>
     <script src="./node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>

@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         moreIcon.src = './icons/more_vert_24dp_800000_FILL0_wght400_GRAD0_opsz24.svg'; // Update this path to the correct icon path
         //moreIcon.alt = 'More';
         moreIcon.classList.add('more-icon'); // Add a class for styling if needed
+        moreIcon.addEventListener('click', () => openFancybox(memberInformation));
         moreCell.appendChild(moreIcon);
         row.appendChild(moreCell);
 
@@ -53,4 +54,42 @@ document.addEventListener('DOMContentLoaded', function() {
         // Append the row to the table body
         tableBody.appendChild(row);
     });
+});
+
+function openFancybox(memberInformation) {
+    document.getElementById('memberNumber').value = memberInformation.memberNumber;
+    document.getElementById('firstName').value = memberInformation.firstName;
+    document.getElementById('lastName').value = memberInformation.lastName;
+    document.getElementById('membershipType').value = memberInformation.membershipType;
+    document.getElementById('membershipStatus').value = memberInformation.membershipStatus;
+    document.getElementById('membershipExpiry').value = memberInformation.membershipExpiry;
+    $.fancybox.open({
+        src: '#memberModal',
+        type: 'inline'
+    });
+}
+
+document.getElementById('saveMember').addEventListener('click', () => {
+    const memberNumber = document.getElementById('memberNumber').value;
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const membershipType = document.getElementById('membershipType').value;
+    const membershipStatus = document.getElementById('membershipStatus').value;
+    const membershipExpiry = document.getElementById('membershipExpiry').value;
+
+    // Update the member information in the data array
+    const member = memberInformation.find(m => m.memberNumber === memberNumber);
+    if (member) {
+        member.firstName = firstName;
+        member.lastName = lastName;
+        member.membershipType = membershipType;
+        member.membershipStatus = membershipStatus;
+        member.membershipExpiry = membershipExpiry;
+    }
+
+    // Close the Fancybox
+    $.fancybox.close();
+
+    // Optionally, update the table row with the new information
+    // (You can implement this part if needed)
 });
