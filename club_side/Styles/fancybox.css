@@ -1,0 +1,57 @@
+/* Custom styles for Fancybox */
+.fancybox-content {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 600px;
+}
+.fancybox-content h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.fancybox-content label {
+    display: flex;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.fancybox-content input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.fancybox-content button {
+    background-color: #800000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.fancybox-content button:hover {
+    background-color: #333;
+}
+.fancybox-content .radio-buttons label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.fancybox-content .radio-buttons {
+    margin-bottom: 10px; /* Increase the space below the radio buttons */
+}
+
+.fancybox-content .radio-buttons label {
+    display: block;
+    margin-right: 10px;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}

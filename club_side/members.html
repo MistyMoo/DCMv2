@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="Styles/sidebar.css">
+    <link rel="stylesheet" href="styles/fancybox.css">
     <link rel="stylesheet" href="./node_modules/@fancyapps/ui/dist/fancybox/fancybox.css">
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Include Fancybox CSS and JS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-</head>
+  </head>
 <body>
 <body>
 <div id="header-container"></div>
@@ -26,10 +25,7 @@
     </div>
     <br>
     <div class="button-container">
-        <div>
-            <!-- Link styled as a button to trigger the iframe popup using Fancybox -->
-            <a data-fancybox data-type="iframe" data-src="new_member.html" href="javascript:;" class="button-like" id="openIframeButton">Enter new member</a>
-        </div>  
+        <div class="button-like" id="addMemberButton">Enter new member</div>  
         <div>
             <button class="button-like" id="searchMembers">Search members</button>
         </div>
@@ -60,22 +56,9 @@
     </table>
     <!-- Modal for Fancybox -->
     <div style="display: none;" id="memberModal">
-        <form>
-            <label for="memberNumber">Member Number:</label>
-            <input type="text" id="memberNumber" readonly><br>
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName"><br>
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName"><br>
-            <label for="membershipType">Membership Type:</label>
-            <input type="text" id="membershipType"><br>
-            <label for="membershipStatus">Membership Status:</label>
-            <input type="text" id="membershipStatus"><br>
-            <label for="membershipExpiry">Membership Expiry:</label>
-            <input type="text" id="membershipExpiry"><br>
-            <button type="button" id="saveMember">Save</button>
-        </form>
+        <div id="memberModalContent"></div>
     </div>
+
 
 
     <script type="module" src="scripts/main.js"></script>
